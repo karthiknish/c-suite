@@ -299,7 +299,72 @@ export default function Home() {
             ))}
           </div>
         </motion.section>
+        <motion.section
+          className="py-24"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-4">
+              Our Process
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              How We Work With You
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              A streamlined approach to integrating executive leadership into
+              your organization
+            </p>
+          </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              {
+                step: "1",
+                title: "Initial Consultation",
+                description:
+                  "We assess your needs and challenges through an in-depth discussion",
+              },
+              {
+                step: "2",
+                title: "Strategic Planning",
+                description:
+                  "Develop a customized roadmap aligned with your business objectives",
+              },
+              {
+                step: "3",
+                title: "Implementation",
+                description:
+                  "Seamless integration of executive leadership into your organization",
+              },
+              {
+                step: "4",
+                title: "Ongoing Support",
+                description:
+                  "Regular reviews and adjustments to ensure optimal results",
+              },
+            ].map((process, index) => (
+              <motion.div
+                key={index}
+                className="p-6 border border-gray-200 rounded-xl relative"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="absolute -top-4 left-6 bg-gray-900 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                  {process.step}
+                </div>
+                <h3 className="font-semibold text-lg mt-4 mb-2">
+                  {process.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{process.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
         <motion.section
           className="py-24 bg-gray-900 text-white rounded-3xl"
           initial={{ opacity: 0 }}
