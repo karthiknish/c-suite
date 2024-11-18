@@ -481,7 +481,7 @@ export default function Home() {
           </div>
         </motion.section>
         <motion.section
-          className="py-24 bg-gray-900 text-white rounded-3xl"
+          className="py-24 bg-black text-white rounded-3xl"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
