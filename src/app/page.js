@@ -366,6 +366,121 @@ export default function Home() {
           </div>
         </motion.section>
         <motion.section
+          className="py-24"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-4">
+              Industries We Serve
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Expertise Across Diverse Sectors
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Our executive team brings deep industry knowledge and proven
+              success across multiple sectors
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                industry: "Technology",
+                description: "From startups to enterprise software companies",
+                expertise: ["SaaS", "Fintech", "AI/ML", "Cybersecurity"],
+              },
+              {
+                industry: "Financial Services",
+                description:
+                  "Traditional and innovative financial institutions",
+                expertise: [
+                  "Banking",
+                  "Insurance",
+                  "Wealth Management",
+                  "Payments",
+                ],
+              },
+              {
+                industry: "Healthcare",
+                description: "Modern healthcare organizations and services",
+                expertise: [
+                  "Digital Health",
+                  "Medical Devices",
+                  "Healthcare IT",
+                  "Biotech",
+                ],
+              },
+              {
+                industry: "Manufacturing",
+                description: "Modern manufacturing and industrial solutions",
+                expertise: [
+                  "Industry 4.0",
+                  "Supply Chain",
+                  "IoT",
+                  "Automation",
+                ],
+              },
+              {
+                industry: "Retail & E-commerce",
+                description: "Digital and traditional retail businesses",
+                expertise: [
+                  "Online Retail",
+                  "Supply Chain",
+                  "Customer Experience",
+                  "Digital Marketing",
+                ],
+              },
+              {
+                industry: "Professional Services",
+                description: "Consulting and professional service firms",
+                expertise: [
+                  "Management Consulting",
+                  "Legal Services",
+                  "Business Strategy",
+                  "Digital Transformation",
+                ],
+              },
+            ].map((industry, index) => (
+              <motion.div
+                key={index}
+                className="p-8 bg-white border border-gray-200 rounded-xl"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {industry.industry}
+                </h3>
+                <p className="text-gray-600 mb-6">{industry.description}</p>
+                <ul className="space-y-2">
+                  {industry.expertise.map((item, i) => (
+                    <li key={i} className="flex items-center text-gray-600">
+                      <svg
+                        className="w-4 h-4 mr-2 text-blue-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M9 12l2 2 4-4"
+                        />
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+        <motion.section
           className="py-24 bg-gray-900 text-white rounded-3xl"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
