@@ -25,6 +25,18 @@ export default function Home() {
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 },
   };
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -49,7 +61,7 @@ export default function Home() {
             transition={{ duration: 0.2 }}
           >
             <div className="relative">
-              {window.innerWidth > 768 ? (
+              {isMobile ? (
                 <ReactPlayer
                   url="https://profici.co.uk/wp-content/uploads/2024/11/Unlock-Business-Potential-Cash-Flow.mp4"
                   width="100%"
