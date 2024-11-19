@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useState, useRef } from "react";
+import FlickeringGrid from "@/components/ui/flickering-grid";
 import {
   Card,
   CardHeader,
@@ -10,8 +12,14 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
+import ReactPlayer from "react-player";
 export default function Home() {
+  const playerRef = useRef(null);
+  const [playing, setPlaying] = useState(false);
+  const handlePlayPause = () => {
+    setPlaying((prev) => !prev);
+  };
+
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -20,35 +28,91 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      <FlickeringGrid className="z-0  absolute opacity-20 inset-0 size-full" />
       <main className="container mx-auto px-4 py-16 sm:py-24">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+          className="flex flex-col items-center gap-8 max-w-4xl mx-auto"
           initial="initial"
           animate="animate"
           variants={fadeIn}
         >
-          <motion.div
-            className="relative h-[400px] md:h-[600px]"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Image
-              src="/cfos.png"
-              alt="Professional executive team"
-              fill
-              className="object-cover rounded-lg"
-              priority
-            />
+          <motion.div className="text-center" variants={fadeIn}>
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight  text-gray-900 mb-6">
+              World-Class C-Suite Leadership,{" "}
+              <span className="text-yellow-400">Fractional Commitment</span>
+            </h1>
           </motion.div>
 
           <motion.div
-            className="flex flex-col gap-6 max-w-xl"
+            className="relative w-full "
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="relative">
+              {window.innerWidth > 768 ? (
+                <ReactPlayer
+                  url="https://profici.co.uk/wp-content/uploads/2024/11/Unlock-Business-Potential-Cash-Flow.mp4"
+                  width="100%"
+                  height="100%"
+                  ref={playerRef}
+                  playing={playing}
+                  controls={false}
+                />
+              ) : (
+                <ReactPlayer
+                  url="https://profici.co.uk/wp-content/uploads/2024/11/Unlock-Your-Business-Potential_-Strategies-to-Increase-Cash-Flow.mp4"
+                  width="100%"
+                  height="100%"
+                  ref={playerRef}
+                  playing={playing}
+                  controls={false}
+                />
+              )}
+              <button
+                className={`absolute inset-0 flex items-center justify-center ${
+                  playing ? "bg-black/0" : "bg-black/30"
+                } hover:bg-black/40 transition-colors`}
+                onClick={handlePlayPause}
+              >
+                {playing ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="white"
+                    className="w-12 h-12"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 5.25v13.5m-7.5-13.5v13.5"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="white"
+                    className="w-12 h-12"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347c-.75.412-1.667-.13-1.667-.986V5.653Z"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="flex flex-col items-center gap-6 max-w-2xl text-center"
             variants={fadeIn}
           >
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
-              World-Class C-Suite Leadership, Fractional Commitment
-            </h1>
-
             <p className="text-lg text-gray-600 leading-relaxed">
               Access seasoned C-Suite executives tailored to your
               needs—strategic guidance without the full-time commitment. Our

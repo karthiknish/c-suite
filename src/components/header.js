@@ -18,9 +18,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full py-6 bg-white border-b border-gray-200">
+    <header className="w-full py-6 z-10 relative bg-white border-b border-gray-200">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-40">
           {menuItems.slice(0, 2).map((item, index) => (
             <Link
