@@ -61,7 +61,7 @@ export default function Home() {
             transition={{ duration: 0.2 }}
           >
             <div className="relative">
-              {isMobile ? (
+              {!isMobile ? (
                 <ReactPlayer
                   url="https://profici.co.uk/wp-content/uploads/2024/11/Unlock-Business-Potential-Cash-Flow.mp4"
                   width="100%"
