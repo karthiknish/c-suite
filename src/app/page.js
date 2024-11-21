@@ -176,7 +176,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-52 lg:grid lg:grid-cols-3 lg:my-44 lg:mx-24 justify-center items-center">
+          <div className="flex flex-col gap-52 lg:grid lg:grid-cols-3 lg:my-44 lg:mx-24 md:mx-12 justify-center items-center">
             <ExpandableComponent
               title="Anthony O'Brien"
               description="Anthony is a distinguished Managing Director with a wealth of experience in steering companies towards sustained growth and success. Renowned for strategic vision and operational acumen, Anthony excels in developing and implementing business strategies that enhance market position and profitability. With a strong background in financial management, team leadership, and stakeholder engagement, Anthony is adept at driving organisational efficiency and fostering a culture of innovation. Under his leadership, companies have consistently achieved their goals and maintained a competitive edge in the industry."
