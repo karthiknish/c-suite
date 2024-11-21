@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import ReactPlayer from "react-player";
+import ExpandableComponent from "@/components/ui/expand";
 export default function Home() {
   const playerRef = useRef(null);
   const [playing, setPlaying] = useState(false);
@@ -155,7 +156,95 @@ export default function Home() {
             </div>
           </motion.div>
         </motion.div>
+        <motion.section
+          className="py-24"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-4">
+              Our Team
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our Esteemed C-Suite Team
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Meet our experienced executives who bring decades of expertise to
+              help drive your business forward
+            </p>
+          </div>
 
+          <div className="flex flex-col gap-52 lg:grid lg:grid-cols-3 lg:my-44 lg:mx-24 justify-center items-center">
+            <ExpandableComponent
+              title="Anthony O'Brien"
+              description="Anthony is a distinguished Managing Director with a wealth of experience in steering companies towards sustained growth and success. Renowned for strategic vision and operational acumen, Anthony excels in developing and implementing business strategies that enhance market position and profitability. With a strong background in financial management, team leadership, and stakeholder engagement, Anthony is adept at driving organisational efficiency and fostering a culture of innovation. Under his leadership, companies have consistently achieved their goals and maintained a competitive edge in the industry."
+              collapsedSize={{ width: 330, height: 220 }}
+              expandedSize={{ width: 500, height: 520 }}
+              expandDirection="both"
+              position="Managing Director"
+              imageSrc={
+                "https://profici.co.uk/wp-content/uploads/2022/04/Anthony-OBrien-Profici.jpg"
+              }
+            ></ExpandableComponent>
+            <ExpandableComponent
+              title="Dan Summers"
+              description="Dan Summers is a seasoned business consultant with extensive experience in strategic consulting, change management, and program management. As Managing Director of OH! Consulting Group, he drives a portfolio of brands with a focus on challenging traditional consulting approaches. Dan has held leadership roles in companies like Xander Talent, where he specialized in embedding skilled professionals into organizations, promoting diversity, and driving sustainable growth. His expertise spans human resources, IT consulting, project management, and transforming business strategies for lasting impact."
+              collapsedSize={{ width: 330, height: 220 }}
+              expandedSize={{ width: 500, height: 520 }}
+              expandDirection="both"
+              position="Managing Director"
+              imageSrc={
+                "https://profici.co.uk/wp-content/uploads/2024/09/Dan-Summers.png"
+              }
+            ></ExpandableComponent>
+            <ExpandableComponent
+              title="Gerald Bradley"
+              description="Gerald Bradley has extensive experience as the Commercial Director at Prosper², where he has helped SME business owners grow and develop through tailored business services. He is skilled in fostering long-term partnerships and implementing successful reward programs to drive client loyalty and business growth. His leadership and expertise in supporting business owners have been key to enabling their success through Prosper²'s innovative membership and rewards programs."
+              collapsedSize={{ width: 330, height: 220 }}
+              expandedSize={{ width: 500, height: 520 }}
+              expandDirection="both"
+              position="Commercial Director"
+              imageSrc={
+                "https://profici.co.uk/wp-content/uploads/2022/07/Gerald-Bradley.png"
+              }
+            ></ExpandableComponent>
+            <ExpandableComponent
+              title="Ian Clague"
+              description="Ian Clague- former senior partner of PwC Isle of Man for 19 years, Ian brings extensive experience of working across multiple industry sectors in a professional career spanning some 35 years. Ian's leadership background makes him your ideal partner for strategic advice and dealing with risk/control based issues. Ian has a particular interest in boardroom dynamics and the wider corporate governance agenda."
+              collapsedSize={{ width: 330, height: 220 }}
+              expandedSize={{ width: 500, height: 520 }}
+              expandDirection="both"
+              position="Senior Partner"
+              imageSrc={
+                "https://profici.co.uk/wp-content/uploads/2024/09/Ian-Clague-1.png"
+              }
+            ></ExpandableComponent>
+            <ExpandableComponent
+              title="John Mahmood"
+              description="John is an award-winning creative director with a proven track record of success in the industry. He has collaborated with renowned brands like Adidas, Apple, Barclays, British Airways, Chelsea FC, Coca-Cola, Electronic Arts, ESPN, Netflix, Nike, Proctor and Gamble, Samsung, Sony, Swatch Group and talkSPORT. He has worked across all mediums, print, on-screen, social media, billboard and broadcast."
+              collapsedSize={{ width: 330, height: 220 }}
+              expandedSize={{ width: 500, height: 520 }}
+              expandDirection="both"
+              position="Creative Director"
+              imageSrc={
+                "https://profici.co.uk/wp-content/uploads/2022/06/John-Mahmood.png"
+              }
+            ></ExpandableComponent>
+            <ExpandableComponent
+              title="Terry Sweeney"
+              description="Terry is an accomplished Financial Director with extensive experience in managing financial operations and driving fiscal stability and growth. Expert in financial planning, analysis, and reporting, Terry excels in developing strategic financial initiatives that align with organisational goals. Terry is adept at overseeing budgeting, forecasting, and investment activities, ensuring optimal resource allocation and compliance with regulatory standards. With strong leadership skills and a keen eye for detail, Terry has a proven track record of enhancing financial performance and supporting sustainable business success."
+              collapsedSize={{ width: 330, height: 220 }}
+              expandedSize={{ width: 500, height: 520 }}
+              expandDirection="both"
+              position="Financial Director"
+              imageSrc={
+                "https://profici.co.uk/wp-content/uploads/2022/04/Terry-New.jpg"
+              }
+            ></ExpandableComponent>
+          </div>
+        </motion.section>
         <motion.section
           className="py-24"
           initial={{ opacity: 0, y: 40 }}
