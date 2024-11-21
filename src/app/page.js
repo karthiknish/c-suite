@@ -163,7 +163,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="text-center mb-16">
+          <div className="text-center ">
             <Badge variant="secondary" className="mb-4">
               Our Team
             </Badge>
@@ -176,13 +176,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-52 lg:grid lg:grid-cols-3 lg:my-44 lg:mx-24 md:mx-12 justify-center items-center">
+          <div className="flex flex-col gap-52 lg:grid lg:grid-cols-3 md:m-0 md:ml-0 lg:my-44 lg:mx-24 md:gap-x-12 xxl:gap-x-52  justify-center items-center">
             <ExpandableComponent
+              className="p-0"
               title="Anthony O'Brien"
-              description="Anthony is a distinguished Managing Director with a wealth of experience in steering companies towards sustained growth and success. Renowned for strategic vision and operational acumen, Anthony excels in developing and implementing business strategies that enhance market position and profitability. With a strong background in financial management, team leadership, and stakeholder engagement, Anthony is adept at driving organisational efficiency and fostering a culture of innovation. Under his leadership, companies have consistently achieved their goals and maintained a competitive edge in the industry."
+              description="Anthony is a distinguished Managing Director with extensive experience in business growth and success. He excels in developing strategies that enhance market position and profitability, with expertise in financial management, team leadership, and stakeholder engagement."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
-              expandDirection="both"
+              expandDirection="left"
               position="Managing Director"
               imageSrc={
                 "https://profici.co.uk/wp-content/uploads/2022/04/Anthony-OBrien-Profici.jpg"
@@ -190,7 +191,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="Dan Summers"
-              description="Dan Summers is a seasoned business consultant with extensive experience in strategic consulting, change management, and program management. As Managing Director of OH! Consulting Group, he drives a portfolio of brands with a focus on challenging traditional consulting approaches. Dan has held leadership roles in companies like Xander Talent, where he specialized in embedding skilled professionals into organizations, promoting diversity, and driving sustainable growth. His expertise spans human resources, IT consulting, project management, and transforming business strategies for lasting impact."
+              description="Dan is a seasoned business consultant specializing in strategic consulting and change management. As Managing Director of OH! Consulting Group, he leads multiple brands with innovative approaches to consulting, focusing on embedding skilled professionals and driving sustainable growth."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
@@ -201,7 +202,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="Gerald Bradley"
-              description="Gerald Bradley has extensive experience as the Commercial Director at Prosper², where he has helped SME business owners grow and develop through tailored business services. He is skilled in fostering long-term partnerships and implementing successful reward programs to drive client loyalty and business growth. His leadership and expertise in supporting business owners have been key to enabling their success through Prosper²'s innovative membership and rewards programs."
+              description="Gerald serves as Commercial Director at Prosper², where he helps SME business owners thrive through tailored business services. His expertise lies in building partnerships and implementing reward programs that drive client loyalty and business growth."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
@@ -212,7 +213,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="Ian Clague"
-              description="Ian Clague- former senior partner of PwC Isle of Man for 19 years, Ian brings extensive experience of working across multiple industry sectors in a professional career spanning some 35 years. Ian's leadership background makes him your ideal partner for strategic advice and dealing with risk/control based issues. Ian has a particular interest in boardroom dynamics and the wider corporate governance agenda."
+              description="Former senior partner of PwC Isle of Man, Ian brings 35 years of cross-industry experience. His expertise in boardroom dynamics and corporate governance makes him an ideal partner for strategic advice and risk management."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
@@ -223,7 +224,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="John Mahmood"
-              description="John is an award-winning creative director with a proven track record of success in the industry. He has collaborated with renowned brands like Adidas, Apple, Barclays, British Airways, Chelsea FC, Coca-Cola, Electronic Arts, ESPN, Netflix, Nike, Proctor and Gamble, Samsung, Sony, Swatch Group and talkSPORT. He has worked across all mediums, print, on-screen, social media, billboard and broadcast."
+              description="Award-winning creative director with success across print, screen, social media, billboard and broadcast. Has collaborated with major brands including Adidas, Apple, Nike, Netflix, and many others."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
@@ -234,7 +235,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="Terry Sweeney"
-              description="Terry is an accomplished Financial Director with extensive experience in managing financial operations and driving fiscal stability and growth. Expert in financial planning, analysis, and reporting, Terry excels in developing strategic financial initiatives that align with organisational goals. Terry is adept at overseeing budgeting, forecasting, and investment activities, ensuring optimal resource allocation and compliance with regulatory standards. With strong leadership skills and a keen eye for detail, Terry has a proven track record of enhancing financial performance and supporting sustainable business success."
+              description="Accomplished Financial Director specializing in financial operations and fiscal growth. Expert in financial planning, analysis, and strategic initiatives with a proven track record of enhancing performance and ensuring regulatory compliance."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
