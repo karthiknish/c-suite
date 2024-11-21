@@ -136,6 +136,8 @@ const Expandable = React.forwardRef<HTMLDivElement, ExpandableProps>(
   }
 );
 
+Expandable.displayName = "Expandable";
+
 // Predefined animation presets
 const ANIMATION_PRESETS = {
   fade: {
@@ -318,6 +320,8 @@ const ExpandableContent = React.forwardRef<
     );
   }
 );
+
+ExpandableContent.displayName = "ExpandableContent";
 
 interface ExpandableCardProps {
   children: ReactNode;
