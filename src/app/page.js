@@ -43,36 +43,6 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    if (!showButton && iframeRef.current) {
-      const checkIframeContent = () => {
-        try {
-          const iframeContent =
-            iframeRef.current.contentDocument ||
-            iframeRef.current.contentWindow.document;
-          if (
-            iframeContent.body.innerText.includes("Thanks for contacting us!")
-          ) {
-            window.location.href = "/thankyou";
-          }
-        } catch (error) {
-          console.log("Error checking iframe content:", error);
-        }
-      };
-
-      const iframe = iframeRef.current;
-      iframe.addEventListener("load", checkIframeContent);
-
-      // Check periodically in case content changes after load
-      const interval = setInterval(checkIframeContent, 1000);
-
-      return () => {
-        iframe.removeEventListener("load", checkIframeContent);
-        clearInterval(interval);
-      };
-    }
-  }, [showButton]);
-
   const scrollToConsultation = () => {
     const element = document.getElementById("consultation");
     if (element) {
