@@ -522,6 +522,7 @@ export default function Home() {
                   frameBorder="0"
                   className="gfiframe"
                   onLoad={(e) => e.target.classList.add("loaded")}
+                  sandbox="allow-scripts allow-forms allow-same-origin allow-top-navigation"
                 ></iframe>
                 <div className="absolute inset-0 flex items-center justify-center bg-white transition-opacity duration-300 iframe-loading">
                   <div className="w-12 h-12 border-4 border-gray-300 border-t-gray-900 rounded-full animate-spin"></div>
