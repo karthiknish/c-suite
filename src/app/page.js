@@ -14,9 +14,11 @@ import {
 import { Badge } from "@/components/ui/badge";
 import ReactPlayer from "react-player";
 import ExpandableComponent from "@/components/ui/expand";
+
 export default function Home() {
   const playerRef = useRef(null);
   const [playing, setPlaying] = useState(false);
+  const [showButton, setShowButton] = useState(true);
   const handlePlayPause = () => {
     setPlaying((prev) => !prev);
   };
@@ -39,9 +41,16 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const scrollToConsultation = () => {
+    const element = document.getElementById("consultation");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
-      <FlickeringGrid className="z-0  absolute opacity-20 inset-0 size-full" />
+      <FlickeringGrid className="z-0 absolute inset-0 size-full  opacity-10" />
       <main className="container mx-auto px-4 py-16 sm:py-24">
         <motion.div
           className="flex flex-col items-center gap-8 max-w-4xl mx-auto"
@@ -123,7 +132,7 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="flex flex-col items-center gap-6 max-w-2xl text-center"
+            className="flex flex-col items-center gap-6 max-w-2xl z-10 text-center"
             variants={fadeIn}
           >
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -133,31 +142,19 @@ export default function Home() {
               you navigate complex challenges and drive sustainable growth.
               Scale smarter, lead stronger with flexible executive solutions.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="w-fit">
-                <a
-                  href="https://profici.co.uk/contact/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get Started Today
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" className="w-fit">
-                <a
-                  href="https://profici.co.uk/about/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Learn More
-                </a>
+            <div className="flex flex-col sm:flex-row gap-4 mt-10">
+              <Button
+                size="lg"
+                className="w-fit"
+                onClick={scrollToConsultation}
+              >
+                Lead Your Business Forward
               </Button>
             </div>
           </motion.div>
         </motion.div>
         <motion.section
-          className="py-24"
+          className="py-24 bg-white mt-20 "
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -170,10 +167,13 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Our Esteemed C-Suite Team
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
               Meet our experienced executives who bring decades of expertise to
               help drive your business forward
             </p>
+            <Button size="lg" className="z-20" onClick={scrollToConsultation}>
+              Get Started
+            </Button>
           </div>
 
           <div className="flex flex-col gap-52 lg:grid lg:grid-cols-3 md:m-0 md:ml-0 lg:my-44 lg:mx-24 md:gap-x-12 xxl:gap-x-52  justify-center items-center">
@@ -260,11 +260,14 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Comprehensive Executive Solutions
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
               Choose from our extensive range of executive services designed to
               elevate your business through strategic leadership and operational
               excellence
             </p>
+            <Button size="lg" onClick={scrollToConsultation}>
+              Get Started
+            </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -281,7 +284,7 @@ export default function Home() {
                 ],
               },
               {
-                title: "Interim CEO",
+                title: "Fractional CEO",
                 description:
                   "Experienced leadership during transitions or growth phases. Navigate critical periods with confidence while maintaining operational continuity.",
                 features: [
@@ -292,14 +295,14 @@ export default function Home() {
                 ],
               },
               {
-                title: "Advisory Board",
+                title: "Fractional CMO",
                 description:
-                  "Access to a network of experienced executives for strategic guidance. Tap into diverse expertise across industries and functional areas.",
+                  "Expert marketing leadership to drive growth and brand strategy. Get strategic direction and execution oversight for your marketing initiatives.",
                 features: [
-                  "Strategic Consulting",
-                  "Industry Expertise",
-                  "Network Access",
-                  "Growth Planning",
+                  "Marketing Strategy",
+                  "Brand Development",
+                  "Digital Marketing",
+                  "Market Analysis",
                 ],
               },
             ].map((service, index) => (
@@ -341,69 +344,10 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <Button variant="outline" className="w-full">
-                      Learn More
-                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>
             ))}
-          </div>
-        </motion.section>
-
-        <motion.section
-          className="py-24 bg-gray-50 rounded-3xl"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="max-w-4xl mx-auto text-center px-6">
-            <Badge variant="secondary" className="mb-4">
-              Why Choose Us
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Unparalleled Expertise That Drives Results
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                {
-                  title: "20+ Years Average Experience",
-                  description:
-                    "Our executives bring decades of hands-on leadership experience across Fortune 500 companies and successful startups",
-                },
-                {
-                  title: "Flexible Engagement Models",
-                  description:
-                    "Customized solutions that scale with your needs, from project-based consulting to ongoing executive leadership",
-                },
-                {
-                  title: "Industry-Specific Expertise",
-                  description:
-                    "Deep knowledge across technology, finance, healthcare, manufacturing, and more",
-                },
-                {
-                  title: "Proven Track Record",
-                  description:
-                    "Consistent success in driving growth, managing transitions, and optimizing operations",
-                },
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className="p-6 bg-white rounded-xl shadow-sm"
-                  whileHover={{ y: -5 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="font-semibold text-lg mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{feature.description}</p>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </motion.section>
 
@@ -421,11 +365,14 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Transforming Businesses Through Strategic Leadership
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
               Our track record speaks for itself - see how our executive
               leadership has driven measurable results across industries and
               company sizes
             </p>
+            <Button size="lg" onClick={scrollToConsultation}>
+              Get Started
+            </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -479,10 +426,13 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               How We Work With You
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
               A streamlined approach to integrating executive leadership into
               your organization
             </p>
+            <Button size="lg" onClick={scrollToConsultation}>
+              Get Started
+            </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -501,9 +451,9 @@ export default function Home() {
               },
               {
                 step: "3",
-                title: "Implementation",
+                title: "Integration",
                 description:
-                  "Seamless integration of executive leadership into your organization",
+                  "Smooth onboarding and integration process with hands-on guidance and support",
               },
               {
                 step: "4",
@@ -531,122 +481,9 @@ export default function Home() {
             ))}
           </div>
         </motion.section>
-        <motion.section
-          className="py-24"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-4">
-              Industries We Serve
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Expertise Across Diverse Sectors
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our executive team brings deep industry knowledge and proven
-              success across multiple sectors
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                industry: "Technology",
-                description: "From startups to enterprise software companies",
-                expertise: ["SaaS", "Fintech", "AI/ML", "Cybersecurity"],
-              },
-              {
-                industry: "Financial Services",
-                description:
-                  "Traditional and innovative financial institutions",
-                expertise: [
-                  "Banking",
-                  "Insurance",
-                  "Wealth Management",
-                  "Payments",
-                ],
-              },
-              {
-                industry: "Healthcare",
-                description: "Modern healthcare organizations and services",
-                expertise: [
-                  "Digital Health",
-                  "Medical Devices",
-                  "Healthcare IT",
-                  "Biotech",
-                ],
-              },
-              {
-                industry: "Manufacturing",
-                description: "Modern manufacturing and industrial solutions",
-                expertise: [
-                  "Industry 4.0",
-                  "Supply Chain",
-                  "IoT",
-                  "Automation",
-                ],
-              },
-              {
-                industry: "Retail & E-commerce",
-                description: "Digital and traditional retail businesses",
-                expertise: [
-                  "Online Retail",
-                  "Supply Chain",
-                  "Customer Experience",
-                  "Digital Marketing",
-                ],
-              },
-              {
-                industry: "Professional Services",
-                description: "Consulting and professional service firms",
-                expertise: [
-                  "Management Consulting",
-                  "Legal Services",
-                  "Business Strategy",
-                  "Digital Transformation",
-                ],
-              },
-            ].map((industry, index) => (
-              <motion.div
-                key={index}
-                className="p-8 bg-white border border-gray-200 rounded-xl"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {industry.industry}
-                </h3>
-                <p className="text-gray-600 mb-6">{industry.description}</p>
-                <ul className="space-y-2">
-                  {industry.expertise.map((item, i) => (
-                    <li key={i} className="flex items-center text-gray-600">
-                      <svg
-                        className="w-4 h-4 mr-2 text-blue-500"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M9 12l2 2 4-4"
-                        />
-                      </svg>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
         <motion.section
+          id="consultation"
           className="py-24 bg-black text-white rounded-3xl"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -666,20 +503,40 @@ export default function Home() {
               Limited availability - Book your strategic consultation today
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-gray-900 hover:bg-gray-100"
-              >
-                <a
-                  href="https://profici.co.uk/contact/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-8"
+              {showButton && (
+                <Button
+                  size="lg"
+                  className="bg-white text-gray-900 hover:bg-gray-100"
+                  onClick={() => setShowButton(false)}
                 >
                   Schedule Consultation
-                </a>
-              </Button>
+                </Button>
+              )}
             </div>
+            {!showButton && (
+              <div className="gfiframe bg-white border border-gray-200 rounded-xl relative">
+                <iframe
+                  src="//profici.co.uk/gfembed/?f=8"
+                  width="100%"
+                  height="900px"
+                  frameBorder="0"
+                  className="gfiframe"
+                  onLoad={(e) => e.target.classList.add("loaded")}
+                ></iframe>
+                <div className="absolute inset-0 flex items-center justify-center bg-white transition-opacity duration-300 iframe-loading">
+                  <div className="w-12 h-12 border-4 border-gray-300 border-t-gray-900 rounded-full animate-spin"></div>
+                </div>
+                <style jsx>{`
+                  .iframe-loading {
+                    opacity: 1;
+                  }
+                  .loaded + .iframe-loading {
+                    opacity: 0;
+                    pointer-events: none;
+                  }
+                `}</style>
+              </div>
+            )}
           </div>
         </motion.section>
       </main>

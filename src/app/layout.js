@@ -50,6 +50,10 @@ export default function RootLayout({ children }) {
             gtag('config', 'AW-10832930955');
           `}
         </Script>
+        <Script
+          src="//profici.co.uk/wp-content/plugins/gravity-forms-iframe-master/assets/scripts/gfembed.min.js"
+          type="text/javascript"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

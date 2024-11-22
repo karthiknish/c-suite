@@ -11,3 +11,7 @@ body {
     --radius: 0.5rem;
   }
 }
+input[type="submit"] {
+  width: 100% !important;
+  color: #000 !important;
+}
