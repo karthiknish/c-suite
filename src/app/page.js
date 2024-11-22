@@ -17,8 +17,10 @@ import ExpandableComponent from "@/components/ui/expand";
 
 export default function Home() {
   const playerRef = useRef(null);
+  const iframeRef = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [showButton, setShowButton] = useState(true);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const handlePlayPause = () => {
     setPlaying((prev) => !prev);
   };
@@ -40,6 +42,36 @@ export default function Home() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (!showButton && iframeRef.current) {
+      const checkIframeContent = () => {
+        try {
+          const iframeContent =
+            iframeRef.current.contentDocument ||
+            iframeRef.current.contentWindow.document;
+          if (
+            iframeContent.body.innerText.includes("Thanks for contacting us!")
+          ) {
+            window.location.href = "/thankyou";
+          }
+        } catch (error) {
+          console.log("Error checking iframe content:", error);
+        }
+      };
+
+      const iframe = iframeRef.current;
+      iframe.addEventListener("load", checkIframeContent);
+
+      // Check periodically in case content changes after load
+      const interval = setInterval(checkIframeContent, 1000);
+
+      return () => {
+        iframe.removeEventListener("load", checkIframeContent);
+        clearInterval(interval);
+      };
+    }
+  }, [showButton]);
 
   const scrollToConsultation = () => {
     const element = document.getElementById("consultation");
@@ -516,13 +548,15 @@ export default function Home() {
             {!showButton && (
               <div className="gfiframe bg-white border border-gray-200 rounded-xl relative">
                 <iframe
+                  ref={iframeRef}
                   src="//profici.co.uk/gfembed/?f=8"
                   width="100%"
                   height="900px"
                   frameBorder="0"
                   className="gfiframe"
-                  onLoad={(e) => e.target.classList.add("loaded")}
-                  sandbox="allow-scripts allow-forms allow-same-origin allow-top-navigation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sandbox="allow-same-origin allow-scripts"
                 ></iframe>
                 <div className="absolute inset-0 flex items-center justify-center bg-white transition-opacity duration-300 iframe-loading">
                   <div className="w-12 h-12 border-4 border-gray-300 border-t-gray-900 rounded-full animate-spin"></div>
