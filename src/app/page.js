@@ -17,7 +17,6 @@ import ExpandableComponent from "@/components/ui/expand";
 
 export default function Home() {
   const playerRef = useRef(null);
-  const iframeRef = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [showButton, setShowButton] = useState(true);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -518,15 +517,12 @@ export default function Home() {
             {!showButton && (
               <div className="gfiframe bg-white border border-gray-200 rounded-xl relative">
                 <iframe
-                  ref={iframeRef}
                   src="//profici.co.uk/gfembed/?f=8"
                   width="100%"
                   height="900px"
                   frameBorder="0"
                   className="gfiframe"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sandbox="allow-same-origin allow-scripts"
+                  onLoad={(e) => e.target.classList.add("loaded")}
                 ></iframe>
                 <div className="absolute inset-0 flex items-center justify-center bg-white transition-opacity duration-300 iframe-loading">
                   <div className="w-12 h-12 border-4 border-gray-300 border-t-gray-900 rounded-full animate-spin"></div>
