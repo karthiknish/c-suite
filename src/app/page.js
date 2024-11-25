@@ -74,7 +74,7 @@ export default function Home() {
             <div className="relative">
               {!isMobile ? (
                 <ReactPlayer
-                  url="https://profici.co.uk/wp-content/uploads/2024/11/Unlock-Business-Potential-Cash-Flow.mp4"
+                  url="https://profici.co.uk/wp-content/uploads/2024/11/Fractured-CEO-Business-Growth.mp4"
                   width="100%"
                   height="100%"
                   ref={playerRef}
@@ -83,7 +83,7 @@ export default function Home() {
                 />
               ) : (
                 <ReactPlayer
-                  url="https://profici.co.uk/wp-content/uploads/2024/11/Unlock-Your-Business-Potential_-Strategies-to-Increase-Cash-Flow.mp4"
+                  url="https://profici.co.uk/wp-content/uploads/2024/11/Fractured-CEO-Business-Growth-1.mp4"
                   width="100%"
                   height="100%"
                   ref={playerRef}
@@ -185,7 +185,7 @@ export default function Home() {
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="left"
-              position="Managing Director"
+              position="CEO"
               imageSrc={
                 "https://profici.co.uk/wp-content/uploads/2022/04/Anthony-OBrien-Profici.jpg"
               }
@@ -196,7 +196,7 @@ export default function Home() {
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
-              position="Managing Director"
+              position="CEO"
               imageSrc={
                 "https://profici.co.uk/wp-content/uploads/2024/09/Dan-Summers.png"
               }
@@ -207,7 +207,7 @@ export default function Home() {
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
-              position="Commercial Director"
+              position="CMO"
               imageSrc={
                 "https://profici.co.uk/wp-content/uploads/2022/07/Gerald-Bradley.png"
               }
@@ -218,7 +218,7 @@ export default function Home() {
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
-              position="Senior Partner"
+              position="COO"
               imageSrc={
                 "https://profici.co.uk/wp-content/uploads/2024/09/Ian-Clague-1.png"
               }
@@ -229,7 +229,7 @@ export default function Home() {
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
-              position="Creative Director"
+              position="CMO"
               imageSrc={
                 "https://profici.co.uk/wp-content/uploads/2022/06/John-Mahmood.png"
               }
@@ -240,7 +240,7 @@ export default function Home() {
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
-              position="Financial Director"
+              position="CFO"
               imageSrc={
                 "https://profici.co.uk/wp-content/uploads/2022/04/Terry-New.jpg"
               }
