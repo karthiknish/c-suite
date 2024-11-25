@@ -74,7 +74,7 @@ export default function Home() {
             <div className="relative">
               {!isMobile ? (
                 <ReactPlayer
-                  url="https://profici.co.uk/wp-content/uploads/2024/11/Fractured-CEO-Business-Growth.mp4"
+                  url="https://profici.co.uk/wp-content/uploads/2024/11/Unlock-Business-Profitability-Video.mp4"
                   width="100%"
                   height="100%"
                   ref={playerRef}
@@ -83,7 +83,7 @@ export default function Home() {
                 />
               ) : (
                 <ReactPlayer
-                  url="https://profici.co.uk/wp-content/uploads/2024/11/Fractured-CEO-Business-Growth-1.mp4"
+                  url="https://profici.co.uk/wp-content/uploads/2024/11/Unlock-Business-Profitability-Video-1.mp4"
                   width="100%"
                   height="100%"
                   ref={playerRef}
