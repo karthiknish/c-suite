@@ -290,7 +290,7 @@ export default function Home() {
                   "Experienced leadership during transitions or growth phases. Navigate critical periods with confidence while maintaining operational continuity.",
                 features: [
                   "Strategic Planning",
-                  "Organizational Development",
+                  "Organisational Development",
                   "Change Management",
                   "Stakeholder Relations",
                 ],
@@ -429,7 +429,7 @@ export default function Home() {
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto mb-8">
               A streamlined approach to integrating executive leadership into
-              your organization
+              your organisation
             </p>
             <Button size="lg" onClick={scrollToConsultation}>
               Get Started
@@ -448,7 +448,7 @@ export default function Home() {
                 step: "2",
                 title: "Strategic Planning",
                 description:
-                  "Develop a customized roadmap aligned with your business objectives",
+                  "Develop a customised roadmap aligned with your business objectives",
               },
               {
                 step: "3",
