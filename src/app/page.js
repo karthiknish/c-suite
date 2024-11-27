@@ -181,7 +181,7 @@ export default function Home() {
             <ExpandableComponent
               className="p-0"
               title="Anthony O'Brien"
-              description="Anthony is a distinguished Managing Director with extensive experience in business growth and success. He excels in developing strategies that enhance market position and profitability, with expertise in financial management, team leadership, and stakeholder engagement."
+              description="A results-driven Managing Director with extensive experience in business growth and strategic leadership. Anthony is known for developing innovative strategies that enhance profitability and market position. His expertise spans financial management, team leadership, and stakeholder engagement, driving long-term success for businesses."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="left"
@@ -192,7 +192,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="Dan Summers"
-              description="Dan is a seasoned business consultant specialising in strategic consulting and change management. As Managing Director of OH! Consulting Group, he leads multiple brands with innovative approaches to consulting, focusing on embedding skilled professionals and driving sustainable growth."
+              description="An experienced business consultant specialising in strategic planning and change management. Dan has successfully led multiple brands with innovative approaches, embedding skilled professionals and implementing strategies that drive sustainable growth and operational excellence."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
@@ -203,7 +203,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="Gerald Bradley"
-              description="Gerald serves as Commercial Director at Prosper², where he helps SME business owners thrive through tailored business services. His expertise lies in building partnerships and implementing reward programs that drive client loyalty and business growth."
+              description="A former Commercial Director with a proven track record of empowering SMEs through tailored business solutions. Gerald specialises in building strategic partnerships, designing client reward programmes, and driving loyalty, resulting in significant business growth for his clients."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
@@ -214,7 +214,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="Ian Clague"
-              description="Former senior partner of PwC Isle of Man, Ian brings 35 years of cross-industry experience. His expertise in boardroom dynamics and corporate governance makes him an ideal partner for strategic advice and risk management."
+              description="With over 35 years of cross-industry experience, Ian is a former senior partner of a global professional services firm. His deep understanding of boardroom dynamics, corporate governance, and risk management makes him a trusted advisor for organisations seeking strategic direction and operational resilience."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
@@ -225,7 +225,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="John Mahmood"
-              description="Award-winning creative director with success across print, screen, social media, billboard and broadcast. Has collaborated with major brands including Adidas, Apple, Nike, Netflix, and many others."
+              description="An award-winning Creative Director with a versatile portfolio spanning print, digital, social media, billboard, and broadcast campaigns. John has collaborated with renowned global brands, including Adidas, Apple, Nike, and Netflix, bringing creative visions to life with measurable success."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
@@ -236,7 +236,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="Terry Sweeney"
-              description="Accomplished Financial Director specialising in financial operations and fiscal growth. Expert in financial planning, analysis, and strategic initiatives with a proven track record of enhancing performance and ensuring regulatory compliance."
+              description="A highly skilled Financial Director with extensive experience in financial planning, analysis, and strategic initiatives. Terry excels in driving fiscal growth, enhancing organisational performance, and ensuring regulatory compliance, delivering robust financial leadership for businesses."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
