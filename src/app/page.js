@@ -177,7 +177,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="flex flex-col gap-52 lg:grid lg:grid-cols-3 md:m-0 md:ml-0 2xl:my-44 md:my-12 lg:mx-24 md:gap-x-12 xxl:gap-x-52  justify-center items-center">
+          <div className="flex flex-col gap-52 lg:grid lg:grid-cols-3 md:m-0 md:ml-0  md:my-12 lg:mx-24 md:gap-x-12 xxl:gap-x-52  justify-center items-center">
             <ExpandableComponent
               title="Anthony O'Brien"
               description="A results-driven Managing Director with extensive experience in business growth and strategic leadership. Anthony is known for developing innovative strategies that enhance profitability and market position. His expertise spans financial management, team leadership, and stakeholder engagement, driving long-term success for businesses."
@@ -247,7 +247,7 @@ export default function Home() {
           </div>
         </motion.section>
         <motion.section
-          className="pt-24"
+          className="pt-24 2xl:py-24"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -352,7 +352,7 @@ export default function Home() {
         </motion.section>
 
         <motion.section
-          className="pt-24"
+          className="pt-24 2xl:py-24"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
