@@ -192,7 +192,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="Dan Summers"
-              description="Dan is a seasoned business consultant specializing in strategic consulting and change management. As Managing Director of OH! Consulting Group, he leads multiple brands with innovative approaches to consulting, focusing on embedding skilled professionals and driving sustainable growth."
+              description="Dan is a seasoned business consultant specialising in strategic consulting and change management. As Managing Director of OH! Consulting Group, he leads multiple brands with innovative approaches to consulting, focusing on embedding skilled professionals and driving sustainable growth."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
@@ -236,7 +236,7 @@ export default function Home() {
             ></ExpandableComponent>
             <ExpandableComponent
               title="Terry Sweeney"
-              description="Accomplished Financial Director specializing in financial operations and fiscal growth. Expert in financial planning, analysis, and strategic initiatives with a proven track record of enhancing performance and ensuring regulatory compliance."
+              description="Accomplished Financial Director specialising in financial operations and fiscal growth. Expert in financial planning, analysis, and strategic initiatives with a proven track record of enhancing performance and ensuring regulatory compliance."
               collapsedSize={{ width: 330, height: 220 }}
               expandedSize={{ width: 500, height: 520 }}
               expandDirection="both"
