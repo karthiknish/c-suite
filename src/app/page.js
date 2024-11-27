@@ -276,10 +276,10 @@ export default function Home() {
               {
                 title: "Fractional CFO",
                 description:
-                  "Strategic financial leadership and planning without the full-time commitment. Get expert guidance on financial strategy, fundraising, M&A, and operational optimization.",
+                  "Strategic financial leadership and planning without the full-time commitment. Get expert guidance on financial strategy, fundraising, M&A, and operational optimisation.",
                 features: [
                   "Financial Strategy & Planning",
-                  "Cash Flow Optimization",
+                  "Cash Flow Optimisation",
                   "Investment & Funding Strategy",
                   "Risk Management",
                 ],
