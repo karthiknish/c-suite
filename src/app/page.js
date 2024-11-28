@@ -137,11 +137,12 @@ export default function Home() {
             variants={fadeIn}
           >
             <p className="text-lg text-gray-600 leading-relaxed">
-              Access seasoned C-Suite executives tailored to your
-              needs—strategic guidance without the full-time commitment. Our
-              elite team brings decades of experience across industries to help
-              you navigate complex challenges and drive sustainable growth.
-              Scale smarter, lead stronger with flexible executive solutions.
+              For just £1,500 per month, access seasoned C-Suite executives
+              tailored to your needs—strategic guidance without the full-time
+              commitment. Our elite team brings decades of experience across
+              industries to help you navigate complex challenges and drive
+              sustainable growth. Scale smarter, lead stronger with flexible
+              executive solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
               <Button
@@ -149,7 +150,7 @@ export default function Home() {
                 className="w-fit"
                 onClick={scrollToConsultation}
               >
-                Lead Your Business Forward
+                Get Started for £1,500/Month
               </Button>
             </div>
           </motion.div>
@@ -275,7 +276,7 @@ export default function Home() {
               {
                 title: "Fractional CFO",
                 description:
-                  "Strategic financial leadership and planning without the full-time commitment. Get expert guidance on financial strategy, fundraising, M&A, and operational optimisation.",
+                  "Strategic financial leadership and planning for £1,500 per month. Get expert guidance on financial strategy, fundraising, M&A, and operational optimisation.",
                 features: [
                   "Financial Strategy & Planning",
                   "Cash Flow Optimisation",
@@ -286,7 +287,7 @@ export default function Home() {
               {
                 title: "Fractional CEO",
                 description:
-                  "Experienced leadership during transitions or growth phases. Navigate critical periods with confidence while maintaining operational continuity.",
+                  "Experienced leadership during transitions or growth phases for £1,500 monthly. Navigate critical periods with confidence while maintaining operational continuity.",
                 features: [
                   "Strategic Planning",
                   "Organisational Development",
@@ -297,7 +298,7 @@ export default function Home() {
               {
                 title: "Fractional CMO",
                 description:
-                  "Expert marketing leadership to drive growth and brand strategy. Get strategic direction and execution oversight for your marketing initiatives.",
+                  "Expert marketing leadership to drive growth and brand strategy for £1,500 per month. Get strategic direction and execution oversight for your marketing initiatives.",
                 features: [
                   "Marketing Strategy",
                   "Brand Development",
@@ -366,8 +367,8 @@ export default function Home() {
               Transforming Businesses Through Strategic Leadership
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-              Our track record speaks for itself - see how our executive
-              leadership has driven measurable results across industries and
+              See the incredible results our clients achieve with our
+              £1,500/month executive leadership package across industries and
               company sizes
             </p>
             <Button size="lg" onClick={scrollToConsultation}>
