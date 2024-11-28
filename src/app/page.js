@@ -137,20 +137,22 @@ export default function Home() {
             variants={fadeIn}
           >
             <p className="text-lg text-gray-600 leading-relaxed">
-              For just £1,500 per month, access seasoned C-Suite executives
-              tailored to your needs—strategic guidance without the full-time
-              commitment. Our elite team brings decades of experience across
-              industries to help you navigate complex challenges and drive
-              sustainable growth. Scale smarter, lead stronger with flexible
-              executive solutions.
+              If you're a business seeking expert leadership without the
+              full-time commitment, our Fractional C-Suite service is the
+              perfect solution. Access top-tier CEOs, CFOs, and CMOs to guide
+              your finance, marketing, and overall strategy—at a fraction of the
+              cost of hiring full-time executives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
               <Button
                 size="lg"
                 className="w-fit"
-                onClick={scrollToConsultation}
+                onClick={() =>
+                  (window.location.href =
+                    "https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001KN0PNRARK3JA2WQNAD4CQBPDYZ&initial=/collect-customer-details")
+                }
               >
-                Get Started for £1,500/Month
+                Get Started for £1,500
               </Button>
             </div>
           </motion.div>
@@ -164,7 +166,7 @@ export default function Home() {
         >
           <div className="text-center ">
             <Badge variant="secondary" className="mb-4">
-              Our Team
+              Repetoire
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Our Esteemed C-Suite Team
@@ -276,7 +278,7 @@ export default function Home() {
               {
                 title: "Fractional CFO",
                 description:
-                  "Strategic financial leadership and planning for £1,500 per month. Get expert guidance on financial strategy, fundraising, M&A, and operational optimisation.",
+                  "Get expert guidance on financial strategy, fundraising, M&A, and operational optimisation at a fractional cost of just £1500.The financial guidance your firm deserves.",
                 features: [
                   "Financial Strategy & Planning",
                   "Cash Flow Optimisation",
@@ -287,7 +289,7 @@ export default function Home() {
               {
                 title: "Fractional CEO",
                 description:
-                  "Experienced leadership during transitions or growth phases for £1,500 monthly. Navigate critical periods with confidence while maintaining operational continuity.",
+                  "Navigate critical periods with confidence while maintaining operational continuity at a fractional cost of just £1500. The adequate handholding that's needed for your business to Grow.",
                 features: [
                   "Strategic Planning",
                   "Organisational Development",
@@ -298,7 +300,7 @@ export default function Home() {
               {
                 title: "Fractional CMO",
                 description:
-                  "Expert marketing leadership to drive growth and brand strategy for £1,500 per month. Get strategic direction and execution oversight for your marketing initiatives.",
+                  "Get strategic direction and execution oversight for your marketing initiatives at a fractional cost of just £1500.Tap into the networks and experience of a seasoned CMO.",
                 features: [
                   "Marketing Strategy",
                   "Brand Development",
@@ -347,68 +349,6 @@ export default function Home() {
                     </ul>
                   </CardContent>
                 </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-
-        <motion.section
-          className="pt-24 2xl:py-24"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-4">
-              Client Success Stories
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Transforming Businesses Through Strategic Leadership
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-              See the incredible results our clients achieve with our
-              £1,500/month executive leadership package across industries and
-              company sizes
-            </p>
-            <Button size="lg" onClick={scrollToConsultation}>
-              Get Started
-            </Button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                metric: "150%",
-                description: "Average Revenue Growth",
-                subtext: "Achieved within first 18 months of engagement",
-              },
-              {
-                metric: "£50M+",
-                description: "Capital Raised",
-                subtext: "Through strategic fundraising and investor relations",
-              },
-              {
-                metric: "90%",
-                description: "Client Retention Rate",
-                subtext: "Long-term partnerships driving sustained success",
-              },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                className="p-8 bg-gray-50 rounded-xl text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-4xl font-bold text-gray-900 mb-2">
-                  {stat.metric}
-                </h3>
-                <p className="text-gray-900 font-semibold mb-2">
-                  {stat.description}
-                </p>
-                <p className="text-sm text-gray-600">{stat.subtext}</p>
               </motion.div>
             ))}
           </div>
@@ -482,6 +422,67 @@ export default function Home() {
             ))}
           </div>
         </motion.section>
+        <motion.section
+          className="pt-24 2xl:py-24"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-4">
+              Client Success Pillars
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Transforming Businesses Through Strategic Leadership
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+              See the incredible results our clients achieve with our
+              £1,500/month executive leadership package across industries and
+              company sizes
+            </p>
+            <Button size="lg" onClick={scrollToConsultation}>
+              Get Started
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                metric: "150%",
+                description: "Average Revenue Growth",
+                subtext: "Achieved within first 18 months of engagement",
+              },
+              {
+                metric: "£50M+",
+                description: "Capital Raised",
+                subtext: "Through strategic fundraising and investor relations",
+              },
+              {
+                metric: "90%",
+                description: "Client Retention Rate",
+                subtext: "Long-term partnerships driving sustained success",
+              },
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                className="p-8 bg-gray-50 rounded-xl text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-4xl font-bold text-gray-900 mb-2">
+                  {stat.metric}
+                </h3>
+                <p className="text-gray-900 font-semibold mb-2">
+                  {stat.description}
+                </p>
+                <p className="text-sm text-gray-600">{stat.subtext}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
 
         <motion.section
           id="consultation"
@@ -505,13 +506,26 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {showButton && (
-                <Button
-                  size="lg"
-                  className="bg-white text-gray-900 hover:bg-gray-100"
-                  onClick={() => setShowButton(false)}
-                >
-                  Schedule Consultation
-                </Button>
+                <>
+                  <Button
+                    size="lg"
+                    className="bg-white text-gray-900 hover:bg-gray-100"
+                    onClick={() => setShowButton(false)}
+                  >
+                    Schedule Consultation
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="bg-white text-gray-900 hover:bg-gray-100"
+                    onClick={() => {
+                      setShowButton(false);
+                      window.location.href =
+                        "https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001KN0PNRARK3JA2WQNAD4CQBPDYZ&initial=/collect-customer-details";
+                    }}
+                  >
+                    Get Start for £1500 Now
+                  </Button>
+                </>
               )}
             </div>
             {!showButton && (
