@@ -175,7 +175,11 @@ export default function Home() {
               Meet our experienced executives who bring decades of expertise to
               help drive your business forward
             </p>
-            <Button size="lg" className="z-20" onClick={scrollToConsultation}>
+            <Button
+              size="lg"
+              className="z-20 mb-10 md:mb-0"
+              onClick={scrollToConsultation}
+            >
               Get Started
             </Button>
           </div>
@@ -423,7 +427,7 @@ export default function Home() {
           </div>
         </motion.section>
         <motion.section
-          className="pt-24 2xl:py-24"
+          className=" 2xl:py-24"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -431,7 +435,7 @@ export default function Home() {
         >
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-4">
-              Client Success Pillars
+              Success Pillars
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Transforming Businesses Through Strategic Leadership
@@ -494,7 +498,8 @@ export default function Home() {
         >
           <div className="max-w-4xl mx-auto text-center px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Ready to Transform Your Business?
+              Ready to Scale Your Success with <br />
+              Expert Leadership?
             </h2>
             <p className="text-gray-300 mb-6">
               Take the first step towards elevating your business with
@@ -523,7 +528,7 @@ export default function Home() {
                         "https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001KN0PNRARK3JA2WQNAD4CQBPDYZ&initial=/collect-customer-details";
                     }}
                   >
-                    Get Start for £1500 Now
+                    Get Started for £1500 Now
                   </Button>
                 </>
               )}
