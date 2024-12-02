@@ -152,7 +152,7 @@ export default function Home() {
                     "https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001KN0PNRARK3JA2WQNAD4CQBPDYZ&initial=/collect-customer-details")
                 }
               >
-                Get Started for £1,500
+                Get Started for £1,500 + VAT
               </Button>
             </div>
           </motion.div>
@@ -528,7 +528,7 @@ export default function Home() {
                         "https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001KN0PNRARK3JA2WQNAD4CQBPDYZ&initial=/collect-customer-details";
                     }}
                   >
-                    Get Started for £1500 Now
+                    Get Started for £1500+VAT
                   </Button>
                 </>
               )}
