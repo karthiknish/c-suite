@@ -536,7 +536,9 @@ export default function Home() {
             {!showButton && (
               <div className="gfiframe bg-white border border-gray-200 rounded-xl relative">
                 <iframe
-                  src="//profici.co.uk/gfembed/?f=8"
+                  src={`//profici.co.uk/gfembed/?f=8&${window.location.search.substring(
+                    1
+                  )}`}
                   width="100%"
                   height="900px"
                   frameBorder="0"
