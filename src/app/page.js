@@ -147,12 +147,9 @@ export default function Home() {
               <Button
                 size="lg"
                 className="w-fit"
-                onClick={() =>
-                  (window.location.href =
-                    "https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001KN0PNRARK3JA2WQNAD4CQBPDYZ&initial=/collect-customer-details")
-                }
+                onClick={scrollToConsultation}
               >
-                Get Started for £1,500 + VAT
+                Get Started Now
               </Button>
             </div>
           </motion.div>
@@ -273,7 +270,7 @@ export default function Home() {
               excellence
             </p>
             <Button size="lg" onClick={scrollToConsultation}>
-              Get Started
+              Get Started Now
             </Button>
           </div>
 
@@ -518,17 +515,6 @@ export default function Home() {
                     onClick={() => setShowButton(false)}
                   >
                     Schedule Consultation
-                  </Button>
-                  <Button
-                    size="lg"
-                    className="bg-white text-gray-900 hover:bg-gray-100"
-                    onClick={() => {
-                      setShowButton(false);
-                      window.location.href =
-                        "https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001KN0PNRARK3JA2WQNAD4CQBPDYZ&initial=/collect-customer-details";
-                    }}
-                  >
-                    Get Started for £1500+VAT
                   </Button>
                 </>
               )}
