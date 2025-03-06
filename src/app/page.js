@@ -14,6 +14,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import ReactPlayer from "react-player";
 import ExpandableComponent from "@/components/ui/expand";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   const playerRef = useRef(null);
@@ -506,45 +507,10 @@ export default function Home() {
             <p className="text-gray-400 mb-12 text-sm">
               Limited availability - Book your strategic consultation today
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              {showButton && (
-                <>
-                  <Button
-                    size="lg"
-                    className="bg-white text-gray-900 hover:bg-gray-100"
-                    onClick={() => setShowButton(false)}
-                  >
-                    Schedule Consultation
-                  </Button>
-                </>
-              )}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="bg-white border border-gray-200 rounded-xl relative">
+              <ContactForm />
             </div>
-            {!showButton && (
-              <div className="gfiframe bg-white border border-gray-200 rounded-xl relative">
-                <iframe
-                  src={`//profici.co.uk/gfembed/?f=8&${window.location.search.substring(
-                    1
-                  )}`}
-                  width="100%"
-                  height="900px"
-                  frameBorder="0"
-                  className="gfiframe"
-                  onLoad={(e) => e.target.classList.add("loaded")}
-                ></iframe>
-                <div className="absolute inset-0 flex items-center justify-center bg-white transition-opacity duration-300 iframe-loading">
-                  <div className="w-12 h-12 border-4 border-gray-300 border-t-gray-900 rounded-full animate-spin"></div>
-                </div>
-                <style jsx>{`
-                  .iframe-loading {
-                    opacity: 1;
-                  }
-                  .loaded + .iframe-loading {
-                    opacity: 0;
-                    pointer-events: none;
-                  }
-                `}</style>
-              </div>
-            )}
           </div>
         </motion.section>
       </main>
